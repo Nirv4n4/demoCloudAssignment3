@@ -1,0 +1,30 @@
+enable
+configure terminal
+
+hostname R2
+no ip domain lookup
+service password-encryption
+
+username cisco privilege 15 algorithm-type scrypt secret cisco123!
+
+aaa new-model
+aaa authentication login default local
+
+ip domain name devnet.lab
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+
+line con 0
+ password cisco
+ login
+
+line vty 0 4
+ login authentication default
+ transport input ssh
+
+restconf
+ip http secure-server
+ip http authentication local
+
+end
+write memory
