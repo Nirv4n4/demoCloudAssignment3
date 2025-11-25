@@ -12,8 +12,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # =========================================================
 # ► AJUSTA ESTAS IPs AL INICIO DEL EXAMEN
 # =========================================================
-R1_IP = "192.168.1.10"      # IP de gestión de R1 (profesor la dará)
-R2_IP = "192.168.1.11"      # IP de gestión de R2 (profesor la dará)
+R1_IP = "192.168.10.1"      # IP de gestión de R1 (profesor la dará)
+R2_IP = "192.168.10.2"      # IP de gestión de R2 (profesor la dará)
 
 USERNAME = "cisco"
 PASSWORD = "cisco123!"
